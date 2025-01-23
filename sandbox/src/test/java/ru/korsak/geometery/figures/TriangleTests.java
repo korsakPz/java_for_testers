@@ -1,3 +1,5 @@
+//Задание №2: Потренироваться использовать функции, классы, объекты и методы
+
 package ru.korsak.geometery.figures;
 
 import org.junit.jupiter.api.Assertions;

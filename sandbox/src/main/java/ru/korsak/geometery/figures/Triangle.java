@@ -1,3 +1,5 @@
+//Задание №2: Потренироваться использовать функции, классы, объекты и методы
+
 package ru.korsak.geometery.figures;
 
 import static java.lang.Math.sqrt;
