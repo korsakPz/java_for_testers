@@ -1,25 +1,16 @@
 public class Hello {
     public static void main(String[] args)
     {
-        try {
-            int z = calculate();
-            System.out.println(z);
-            System.out.println("Hello world");
+            var x = 1;
+            var y = 1;
 
-        } catch (ArithmeticException exception) {
+            if (y == 0) {
+                System.out.println("Division by zero is not allowed");
+            } else {
+                int z = divide(x, y);
+                System.out.println("Hello world");
+            }
 
-            exception.printStackTrace();
-        }
-
-
-
-    }
-
-    private static int calculate() {
-        var x = 1;
-        var y = 1;
-        var z = divide(x, y);
-        return z;
     }
 
     private static int divide(int x, int y) {
