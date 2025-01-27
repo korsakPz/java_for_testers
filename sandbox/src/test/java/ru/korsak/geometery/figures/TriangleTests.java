@@ -20,6 +20,18 @@ public class TriangleTests {
         double resultP = pEp.calculateP();
         Assertions.assertEquals(84.0, resultP);
 
-
     }
+
+    @Test  //Задание №3: Потренироваться использовать ветвление и исключения
+    void checkNegativeSide()
+    {
+        try {
+            new Triangle(-1.0, 2.0, 3.0);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {
+            System.out.println("OK");
+        }
+    }
+
+
 }

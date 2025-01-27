@@ -4,12 +4,15 @@ package ru.korsak.geometery.figures;
 
 import static java.lang.Math.sqrt;
 
-public record Triangle(
-        double a,
-        double b,
-        double c
-
-) {
+public record Triangle(double a, double b, double c) { //Задание №3: Потренироваться использовать ветвление и исключения
+    public Triangle{
+        if (a < 0 || b < 0 || c < 0 ) {
+            throw new IllegalArgumentException("Triangle mast only positive side");
+        }
+        if ((a + b) > c ){
+            System.out.println("OK");
+        }
+    }
 
     static double area;
 
