@@ -26,7 +26,8 @@ public record Rectangle(
 
         Rectangle rectangle = (Rectangle) o;
         return (Double.compare(this.a, rectangle.a) == 0 && Double.compare(this.b, rectangle.b) == 0)
-                || (Double.compare(rectangle.a, this.b) == 0 && Double.compare(rectangle.b, this.a) == 0);
+                || (Double.compare(this.b, rectangle.a) == 0 && Double.compare(this.a, rectangle.b) == 0)
+                ;
     }
 
     @Override

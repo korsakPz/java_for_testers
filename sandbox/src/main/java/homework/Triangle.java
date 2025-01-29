@@ -1,4 +1,7 @@
 package homework;
 
-public class Triangle {
-}
+public record Triangle(double a, double b, double c) {
+
+    }
+
+

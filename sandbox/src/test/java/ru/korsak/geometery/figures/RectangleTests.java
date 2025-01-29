@@ -15,19 +15,19 @@ public class RectangleTests {
     }
 
     @Test
-    void testNonEquality() {
-        var s1 = new Square(5.0);
-        var s2 = new Square(4.0);
-        Assertions.assertNotEquals(s1, s2);
+    void testEquality() {
+        var r1 = new Rectangle(5.0, 4.0);
+        var r2 = new Rectangle(5.0, 4.0);
+        Assertions.assertEquals(r1, r2);
     }
 
     @Test
-    void testFail() {
-        var s1 = new Square(5.0);
-        var s2 = new Square(5.0);
-        Assertions.assertTrue(s1.equals(s2));
-
+    void testEquality2() {
+        var r1 = new Rectangle(4.0, 4.0);
+        var r2 = new Rectangle(5.0, 5.0);
+        Assertions.assertEquals(r1, r2);
     }
+
 
 
 }
