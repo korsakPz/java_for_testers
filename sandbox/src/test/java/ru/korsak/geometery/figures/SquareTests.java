@@ -14,7 +14,7 @@ public class SquareTests {
     }
 
     @Test
-    void canCalculatePerimeter(){
+    void canCalculatePerimeter() {
         Assertions.assertEquals(20.0, new Square(5.0).perimeter());
     }
 
@@ -26,8 +26,20 @@ public class SquareTests {
         } catch (IllegalArgumentException exception) {
             //OK
         }
+    }
 
+    @Test
+    void testEquality() {
+        var r1 = new Rectangle(5.0, 4.0);
+        var r2 = new Rectangle(5.0, 4.0);
+        Assertions.assertTrue(r1.equals(r2));
+    }
 
+    @Test
+    void testEquality2() {
+        var r1 = new Rectangle(5.0, 4.0);
+        var r2 = new Rectangle(4.0, 5.0);
+        Assertions.assertTrue(r1.equals(r2));
     }
 
 }
