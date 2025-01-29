@@ -32,8 +32,6 @@ public record Rectangle(
 
     @Override
     public int hashCode() {
-        int result = Double.hashCode(a);
-        result = 31 * result + Double.hashCode(b);
-        return result;
+        return 1;
     }
 }

@@ -23,8 +23,8 @@ public class RectangleTests {
 
     @Test
     void testEquality2() {
-        var r1 = new Rectangle(4.0, 4.0);
-        var r2 = new Rectangle(5.0, 5.0);
+        var r1 = new Rectangle(5.0, 4.0);
+        var r2 = new Rectangle(4.0, 5.0);
         Assertions.assertEquals(r1, r2);
     }
 
