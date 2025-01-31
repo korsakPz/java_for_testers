@@ -6,8 +6,12 @@ import static java.lang.Math.sqrt;
 
 public record Triangle(double a, double b, double c) { //Задание №3: Потренироваться использовать ветвление и исключения
     public Triangle{
-        if (((a < 0) || (b < 0) || (c < 0)) && ((a + b) >= c && (b + c) >= a && (c + a) >= b )){
-            throw new IllegalArgumentException("Triangle mast only positive side");
+        if (((a < 0) || (b < 0) || (c < 0)) {
+            throw new IllegalArgumentException("Triangle mast have only positive side");
+        }
+        if (((a + b) >= c && (b + c) >= a && (c + a) >= b )){
+            throw new IllegalArgumentException("Triangle mast have two side no more than third side");
+
         }
 
     }
