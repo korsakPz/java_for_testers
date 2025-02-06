@@ -9,7 +9,7 @@ public class GroupRemovalTests extends TestBase {
 
     @Test
     public void testRemovalGroup() {
-        app.openGroupsPage();
+        app.groups().openGroupsPage();
         if (!app.isGroupPresent()) {
             app.createGroup(new GroupData("group_name", "group_header", "group_footer"));
 
