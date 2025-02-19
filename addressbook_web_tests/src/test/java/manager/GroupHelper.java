@@ -19,11 +19,11 @@ public class GroupHelper {
         }
     }
 
-    public boolean isGroupPresent(ApplicationManager manager) {
+    public boolean isGroupPresent() {
         return manager.isElementPresent(By.name("selected[]"));
     }
 
-    public void createGroup(GroupData group, ApplicationManager manager) {
+    public void createGroup(GroupData group) {
         manager.driver.findElement(By.name("new")).click();
         manager.driver.findElement(By.name("group_name")).click();
         manager.driver.findElement(By.name("group_name")).sendKeys(group.name());
