@@ -45,7 +45,7 @@ public class TestBase {
         }
 
     }
-    //Gradle sssuka
+    
     protected void createGroup(String group_name, String group_header, String group_footer) {
         driver.findElement(By.name("new")).click();
         driver.findElement(By.name("group_name")).click();
