@@ -1,13 +1,17 @@
 package manager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class HelperBase {
     protected final ApplicationManager manager;
 
+
     public HelperBase(ApplicationManager manager) {
         this.manager = manager;
     }
+
+
 
     protected void type(By locator, String text) {
         click(locator);
