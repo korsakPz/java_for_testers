@@ -2,6 +2,10 @@ package manager;
 
 import model.GroupData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class GroupHelper extends HelperBase{
 
@@ -70,6 +74,8 @@ public class GroupHelper extends HelperBase{
 
 
     private void returnToGroupsPage() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("group page")));
         click(By.linkText("group page"));
     }
 
