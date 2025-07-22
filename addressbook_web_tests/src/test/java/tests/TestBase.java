@@ -16,7 +16,7 @@ public class TestBase {
         }
 
 
-        app.init();
+        app.init(System.getProperty("browser", "chrome"));
 
 
     }
