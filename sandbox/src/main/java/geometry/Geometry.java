@@ -1,5 +1,8 @@
 package geometry;
 
+import geometry.figures.Rectangle;
+import geometry.figures.Square;
+
 public class Geometry {
 
 
@@ -8,5 +11,6 @@ public class Geometry {
         Square.printSquareArea(new Square(12.0));
         Square.printSquareArea(new Square(2.8));
 
-        Rectangle.printRectangleArea(3.0,5.0);
+        Rectangle.printRectangleArea(3.0, 5.0);
+    }
 }

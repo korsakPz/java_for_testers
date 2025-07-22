@@ -1,4 +1,5 @@
 package ru.korsak.geometry.figures;
+import geometry.figures.Rectangle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

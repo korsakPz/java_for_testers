@@ -1,5 +1,9 @@
 package ru.korsak.geometry.figures;
 
+import geometry.figures.Square;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 public class SquareTests {
 
 
@@ -29,6 +33,7 @@ public class SquareTests {
     }
 
     @Test
+
     void testFail() {
         var s1 = new Square(5.0);
         var s2 = new Square(5.0);
