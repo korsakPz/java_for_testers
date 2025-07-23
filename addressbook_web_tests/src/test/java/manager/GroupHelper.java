@@ -2,6 +2,9 @@ package manager;
 
 import model.GroupData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 
 public class GroupHelper extends HelperBase{
@@ -99,8 +102,8 @@ public class GroupHelper extends HelperBase{
     }
 
     private void selectAllGroups() {
-        var checkboxes =  manager.driver.findElements(By.name("selected[]")).size();
-        for (var checkbox : checkboxes) {
+        List<WebElement> checkboxes = manager.driver.findElements(By.name("selected[]"));
+        for (WebElement checkbox : checkboxes) {
             checkbox.click();
         }
     }
