@@ -8,7 +8,7 @@ public class GroupModificationTests extends TestBase{
     @Test
     void canModificationGroup() {
 
-        if (!app.groups().isGroupPresent()) {
+        if (app.groups().getCount() == 0) {
             app.groups().createGroup(new GroupData("", "", ""));
 
         }
