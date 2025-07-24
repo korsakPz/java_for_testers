@@ -2,7 +2,6 @@ package tests;
 
 import model.GroupData;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -17,13 +16,19 @@ public class GroupCreationTests extends TestBase {
         for (var name : List.of("", "group name", "")) {
             for (var header: List.of("", "group header")) {
                 for (var footer : List.of("", " group footer")) {
-                    result.add(new GroupData(name, header, footer));
+                    result.add(new GroupData()
+                            .withName(name)
+                            .withHeader(header)
+                            .withFooter(footer));
 
                 }
             }
         }
         for (int i = 0; i < 5; i++) {
-           result.add(new GroupData(randomeString(i * 10), randomeString(i * 10), randomeString(i * 10)));
+           result.add(new GroupData()
+                   .withName(randomeString(i * 10))
+                   .withHeader(randomeString(i * 10))
+                   .withFooter(randomeString(i * 10)));
         }
         return result;
 
@@ -31,7 +36,7 @@ public class GroupCreationTests extends TestBase {
 
     public static List<GroupData> negativeGroupProvider() {
         var result = new ArrayList<GroupData>(List.of(
-        new GroupData("group name' ", "", "")));
+        new GroupData("", "group name' ", "", "")));
         return result;
 
     }
