@@ -38,7 +38,7 @@ public class GroupCreationTests extends TestBase {
         int n = 5;
         int groupCount = app.groups().getCount();
         for (int i = 0; i < n; i++) {
-            app.groups().createGroup(new GroupData(new GroupData(randomeString(i)), "group header " + i, "group footer " + i));
+            app.groups().createGroup(new GroupData(randomeString(i)), "group header ", "group footer ");
         }
 
 
