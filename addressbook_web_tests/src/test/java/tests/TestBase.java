@@ -23,13 +23,14 @@ public class TestBase {
 
     }
 
-    public String randomeString(int n) {
+    public static String randomeString(int n) {
         var rnd = new Random();
         var result = "";
         for (int i = 0; i < n; i++) {
             result = result + (char)('a'+ rnd.nextInt(26));
         }
-        return result;
+
+         return result;
     }
 
 }
