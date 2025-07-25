@@ -3,17 +3,23 @@ package manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.File;
 
 public class HelperBase {
     protected final ApplicationManager manager;
+    protected WebDriver wd;
 
 
-    public HelperBase(ApplicationManager manager) {
+//    public HelperBase(ApplicationManager manager) {
+//
+//        this.manager = manager;
+//    }
+
+
+    public HelperBase(ApplicationManager manager, WebDriver wd) {
         this.manager = manager;
+        this.wd = wd;
     }
-
 
 
     protected void type(By locator, String text) {

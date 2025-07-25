@@ -5,7 +5,8 @@ import org.openqa.selenium.By;
 
 public class ContactHelper extends HelperBase{
     public ContactHelper(ApplicationManager app) {
-        super(app);
+
+        super(app.getDriver());
     }
 
     public void create(ContactData contact) {
@@ -14,21 +15,22 @@ public class ContactHelper extends HelperBase{
         submitContactCreation();
     }
 
+    private void fillContactForm(ContactData contactData) {
+        type(By.name("firstname"), contactData.getFirstname());
+        type(By.name("lastname"), contactData.getLastname());
+
+        if (contactData.getPhotoPath() != null) {
+            attach(By.name("photo"), contactData.getPhotoPath());
+        }
+
+    }
+
     private void initContactCreation() {
+
         click(By.linkText("add new"));
     }
 
-    private void fillContactForm(ContactData contact) {
-
-        private void fillContactForm(ContactData contactData) {
-            type(By.name("firstname"), contactData.getFirstname());
-            type(By.name("lastname"), contactData.getLastname());
-
-            if (contactData.getPhotoPath() != null) {
-                attach(By.name("photo"), contactData.getPhotoPath());
-            }
-        }
-    }
+  
 
     private void submitContactCreation() {
         click(By.name("submit"));
