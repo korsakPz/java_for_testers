@@ -7,6 +7,9 @@ public class ContactCreationTests extends TestBase {
 
     @Test
     void canCreateContact() {
-        //var contact = new ContactData().withFirstName(randomeString(10)).withLastName(randomeString(10));
+        var contact = new ContactData()
+                .withFirstName(randomeString(10))
+                .withLastName(randomeString(10));
+        app.contacts(contact);
     }
 }
