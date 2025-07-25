@@ -68,4 +68,10 @@ public class ApplicationManager {
         return contactHelper;
     }
 
+    public WebDriver getDriver() {
+        return this.driver;
+    }
+
+
+
 }

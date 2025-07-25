@@ -16,7 +16,8 @@ import static java.lang.String.format;
 public class GroupHelper extends HelperBase{
 
     public GroupHelper(ApplicationManager manager) {
-        super(manager);
+
+        super(manager, manager.getDriver());
     }
 
     public void openGroupsPage() {

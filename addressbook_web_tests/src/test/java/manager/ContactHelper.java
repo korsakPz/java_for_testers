@@ -4,9 +4,9 @@ import model.ContactData;
 import org.openqa.selenium.By;
 
 public class ContactHelper extends HelperBase{
-    public ContactHelper(ApplicationManager app) {
+    public ContactHelper(ApplicationManager manager) {
 
-        super(app.getDriver());
+        super(manager, manager.getDriver());
     }
 
     public void create(ContactData contact) {
