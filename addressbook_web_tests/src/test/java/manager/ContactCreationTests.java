@@ -10,7 +10,10 @@ public class ContactCreationTests extends TestBase {
     void canCreateContact() {
         var contact = new ContactData()
                 .withFirstName(randomString(10))
-                .withLastName(randomString(10));
-        app.contacts(contact);
+                .withLastName(randomString(10))
+                .withAddress("Test Address")
+                .withEmail("test@example.com")
+                .withMobilePhone("+1234567890");;
+        app.contact().create(contact);
     }
 }

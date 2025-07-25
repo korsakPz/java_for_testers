@@ -1,5 +1,8 @@
 package manager;
 
+import model.ContactData;
+import org.openqa.selenium.By;
+
 public class ContactHelper extends HelperBase{
     public ContactHelper(ApplicationManager app) {
         super(app);
@@ -18,7 +21,10 @@ public class ContactHelper extends HelperBase{
     private void fillContactForm(ContactData contact) {
         type(By.name("firstname"), contact.getFirstName());
         type(By.name("lastname"), contact.getLastName());
-        type(By.name("address"), contact.getAddress());
+        if (contact.getAddress() != null) {
+            type(By.name("address"), contact.getAddress());
+        }
+
         type(By.name("email"), contact.getEmail());
         type(By.name("mobile"), contact.getMobilePhone());
     }
