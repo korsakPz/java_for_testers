@@ -8,6 +8,7 @@ public class ContactData {
     private String address;
     private String email;
     private String mobilePhone;
+    private String photo;
 
     public ContactData withFirstName(String firstName) {
         this.firstName = firstName;
@@ -34,6 +35,13 @@ public class ContactData {
         return this;
     }
 
+    public ContactData withPhoto(String photo) {
+        this.mobilePhone = photo;
+        return this;
+    }
+
+
+
     // Геттеры
     public String getFirstName() {
         return firstName;
@@ -54,4 +62,12 @@ public class ContactData {
     public String getMobilePhone() {
         return mobilePhone;
     }
+
+    public String withPhoto() {
+
+        return photo;
+    }
+
+    public ContactData withPhoto
+
 }

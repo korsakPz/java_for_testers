@@ -13,7 +13,8 @@ public class ContactCreationTests extends TestBase {
                 .withLastName(randomString(10))
                 .withAddress("Test Address")
                 .withEmail("test@example.com")
-                .withMobilePhone("+1234567890");;
+                .withMobilePhone("+1234567890")
+                .withPhoto("src/test/resources/images/cat.png");;
         app.contact().create(contact);
     }
 }
