@@ -19,15 +19,15 @@ public class ContactHelper extends HelperBase{
     }
 
     private void fillContactForm(ContactData contact) {
-        type(By.name("firstname"), contact.getFirstName());
-        type(By.name("lastname"), contact.getLastName());
-        if (contact.getAddress() != null) {
-            type(By.name("address"), contact.getAddress());
-        }
 
-        type(By.name("email"), contact.getEmail());
-        type(By.name("mobile"), contact.getMobilePhone());
-        attach(By.name("photo"), contact.withPhoto());
+        private void fillContactForm(ContactData contactData) {
+            type(By.name("firstname"), contactData.getFirstname());
+            type(By.name("lastname"), contactData.getLastname());
+
+            if (contactData.getPhotoPath() != null) {
+                attach(By.name("photo"), contactData.getPhotoPath());
+            }
+        }
     }
 
     private void submitContactCreation() {

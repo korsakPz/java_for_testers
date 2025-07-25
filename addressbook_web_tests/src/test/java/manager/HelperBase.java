@@ -26,8 +26,14 @@ public class HelperBase {
         manager.driver.findElement(locator).click();
     }
 
-    protected void attach(By locator, String file) {
-        manager.driver.findElement(locator).sendKeys(Paths.get(file).toAbsolutePath().toString());
+    protected void attach(By locator, String filePath) {
+
+        if (filePath != null) {
+        File file = new File(filePath);
+        if (file.exists()) {
+            wd.findElement(locator).sendKeys(file.getAbsolutePath());
+        }
+    }
 
 
 
