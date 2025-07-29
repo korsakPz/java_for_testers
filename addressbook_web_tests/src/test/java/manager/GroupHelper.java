@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import static java.lang.String.format;
 
@@ -110,10 +111,11 @@ public class GroupHelper extends HelperBase{
     }
 
     private void selectAllGroups() {
-        List<WebElement> checkboxes = manager.driver.findElements(By.name("selected[]"));
-        for (WebElement checkbox : checkboxes) {
-            checkbox.click();
-        }
+        manager.driver
+                .findElements(By.name("selected[]"))
+                .forEach(WebElement::click);
+
+
     }
 
     public List<GroupData> getList() {
