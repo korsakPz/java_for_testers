@@ -35,10 +35,7 @@ public class HelperBase {
     protected void attach(By locator, String filePath) {
 
         if (filePath != null) {
-        File file = new File(filePath);
-        if (file.exists()) {
-            wd.findElement(locator).sendKeys(file.getAbsolutePath());
-        }
+            manager.driver.findElement(locator).sendKeys(new File(filePath).getAbsolutePath());
     }
 
 

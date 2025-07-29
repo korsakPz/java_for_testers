@@ -9,24 +9,13 @@ public class ContactCreationTests extends TestBase {
 
     @Test
     void canCreateContact() {
-        String photoPath = "src/test/resources/images/avatar.png";
-        File photo = new File(photoPath);
+        String imagePath  = "src/test/resources/images/avatar.png";
+        System.out.println("Uploading image: " + imagePath);
 
-        if (!photo.exists()) {
-            throw new RuntimeException("FILE NOT FOUND: " + photo.getAbsolutePath());
-        }
-        //System.out.println("ABSOLUTE PATH TO FILE: " + photo.getAbsolutePath());
-
-//        app.contact().create(new ContactData()
-//                .withFirstname("Test")
-//                .withLastname("User")
-//                .withPhoto("src/test/resources/images/avatar.png"));
-
-        var contact = new ContactData()
+        app.contact().create(new ContactData()
                 .withFirstname(randomString(10))
-                .withLastname("Wirr")
-                .withPhoto(photoPath);
-        app.contact().create(contact);
+                .withLastname(randomString(10))
+                .withPhoto(imagePath));
 
 
     }
