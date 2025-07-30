@@ -11,6 +11,7 @@ public class ApplicationManager {
     private WebDriver driver;
     private String string;
     private Properties properties;
+    private SessionHelper sessionHelper;
 
 
     public void init(String browser, Properties properties) {
@@ -37,5 +38,14 @@ public class ApplicationManager {
 
         }
         return driver;
+    }
+
+    public SessionHelper session() {
+        if (sessionHelper == null) {
+            sessionHelper = new SessionHelper(this);
+
+        }
+        return sessionHelper;
+
     }
 }
